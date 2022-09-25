@@ -1,40 +1,46 @@
-*{
+* {
     padding: 0;
     margin: 0;
     background-color: antiquewhite;
 }
-.parent{
-    margin-top:10%;
+
+.parent {
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#container{
+
+#container {
     padding: 3rem;
     width: 30rem;
     height: 10rem;
-    border:2px solid;
+    border: 2px solid;
     border-radius: 10px;
     font-size: 20px;
 }
-#btn{
+
+#btn {
     border-radius: 5px;
     margin-top: 5px;
     height: 2rem;
     width: 5rem;
-    background-color:#ECDDD0;
+    background-color: #ECDDD0;
 }
-#btn:hover{
+
+#btn:hover {
     color: #000;
     background-color: brown;
     border-style: dotted;
     transition: 0.5s ease;
 }
-#author{
+
+#author {
     margin-top: 2rem;
     font-family: 'Lobster', cursive;
     float: right;
 }
-#quote{
+
+#quote {
     font-family: 'Lobster', cursive;
 }
