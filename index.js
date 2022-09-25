@@ -16,3 +16,9 @@ function generator() {
             author.innerHTML = `by : ${data.author}`;
         })
 }
+// fetch("https://type.fit/api/quotes")
+// .then(res => console.log(res.json()))
+// .then(data=>{
+//     quote.innerHTML = `" ${data.Array.text}"`;
+//             author.innerHTML = `by : ${data.author}`;
+// })
