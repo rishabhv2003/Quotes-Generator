@@ -13,8 +13,8 @@
 
 #container {
     padding: 3rem;
-    width: 30rem;
-    height: 10rem;
+    width: 30%;
+    height: 10%;
     border: 2px solid;
     border-radius: 10px;
     font-size: 20px;
@@ -26,6 +26,7 @@
     height: 2rem;
     width: 5rem;
     background-color: #ECDDD0;
+    font-family: 'Lobster', cursive;
 }
 
 #btn:hover {
@@ -37,8 +38,8 @@
 
 #author {
     margin-top: 2rem;
-    font-family: 'Lobster', cursive;
     float: right;
+    font-family: 'Lobster', cursive;
 }
 
 #quote {

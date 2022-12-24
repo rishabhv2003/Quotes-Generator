@@ -11,7 +11,7 @@ const getNewQuotes = ()=>{
 generator(); // calling the function here so that div won't load blank
 btn.addEventListener("click", generator);
 let realData = "";
-// async function to generate quotes
+
 async function generator() {
     const api = "https://type.fit/api/quotes";
     try {
