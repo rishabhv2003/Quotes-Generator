@@ -1,6 +1,10 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: antiquewhite;
 }
 
@@ -12,9 +16,11 @@
 }
 
 #container {
-    padding: 3rem;
+    text-align: center;
+    padding: 2rem;
     width: 30%;
-    height: 10%;
+    height: auto;
+    max-width: 400px;
     border: 2px solid;
     border-radius: 10px;
     font-size: 20px;
@@ -44,4 +50,26 @@
 
 #quote {
     font-family: 'Lobster', cursive;
+}
+
+@media only screen and (max-width: 600px) {
+    #container {
+        padding: 10px;
+        width: 80%;
+    }
+
+    #quote {
+        font-size: 18px;
+    }
+
+    #author {
+        font-size: 14px;
+        float: none;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    #btn {
+        width: 30%;
+    }
 }

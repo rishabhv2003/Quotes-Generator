@@ -1,25 +1,78 @@
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
 const btn = document.getElementById('btn');
-let number = 0;
-// function to generate random numbers
-const getNewQuotes = ()=>{
-    let num = Math.floor(Math.random() * (1642 - 0) + 0);
-    number = num;
-    return num;
-}
-generator(); // calling the function here so that div won't load blank
-btn.addEventListener("click", generator);
-let realData = "";
-
-async function generator() {
-    const api = "https://type.fit/api/quotes";
-    try {
-        let data = await fetch(api);
-        realData = await data.json();
-        quote.innerHTML = `" ${realData[getNewQuotes()].text} "`;
-        author.innerHTML = `by : ${realData[number].author}`
-    } catch (error) {
-        alert("An error has occurred pls reload the page.")
+let realData = [
+    {
+        "text": "Genius is one percent inspiration and ninety-nine percent perspiration.",
+        "author": "Thomas Edison"
+    },
+    {
+        "text": "You can observe a lot just by watching.",
+        "author": "Yogi Berra"
+    },
+    {
+        "text": "A house divided against itself cannot stand.",
+        "author": "Abraham Lincoln"
+    },
+    {
+        "text": "Difficulties increase the nearer we get to the goal.",
+        "author": "Johann Wolfgang von Goethe"
+    },
+    {
+        "text": "Fate is in your hands and no one elses",
+        "author": "Byron Pulsifer"
+    },
+    {
+        "text": "Be the chief but never the lord.",
+        "author": "Lao Tzu"
+    },
+    {
+        "text": "Nothing happens unless first we dream.",
+        "author": "Carl Sandburg"
+    },
+    {
+        "text": "Well begun is half done.",
+        "author": "Aristotle"
+    },
+    {
+        "text": "Life is a learning experience, only if you learn.",
+        "author": "Yogi Berra"
+    },
+    {
+        "text": "Self-complacency is fatal to progress.",
+        "author": "Margaret Sangster"
+    },
+    {
+        "text": "Peace comes from within. Do not seek it without.",
+        "author": "Buddha"
+    },
+    {
+        "text": "What you give is what you get.",
+        "author": "Byron Pulsifer"
+    },
+    {
+        "text": "We can only learn to love by loving.",
+        "author": "Iris Murdoch"
+    },
+    {
+        "text": "Life is change. Growth is optional. Choose wisely.",
+        "author": "Karen Clark"
+    },
+    {
+        "text": "You'll see it when you believe it.",
+        "author": "Wayne Dyer"
+    }
+];
+let currentQuoteIndex = 0;
+function generator() {
+    if (currentQuoteIndex < realData.length) {
+        const currentQuote = realData[currentQuoteIndex];
+        quote.innerHTML = `"${currentQuote.text}"`;
+        author.innerHTML = `By: ${currentQuote.author}`;
+        currentQuoteIndex++;
+    } else {
+        currentQuoteIndex = 0;
     }
 }
+generator();
+btn.addEventListener("click", generator);
